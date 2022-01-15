@@ -1,0 +1,287 @@
+:root{
+    --red: #fa3f3f;
+    --white: #fff;
+    --gray: #f1f1f1;
+    --gray2: #efefef;
+    --gray3: #dfdfdf;
+    --dark: #1f1f1f;
+    --dark_white: #eeeeee;
+    --shadow: #3e3e3e29;
+    --black: #000;
+    --green: #33b437;
+    --dark_green: #2f9f33;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 10px;
+}
+
+body{
+    background-image: linear-gradient(to bottom, var(--white), var(--gray));
+    user-select: none;
+    overflow: hidden;
+}
+
+canvas{
+    position: absolute;
+}
+
+ul{
+    list-style: none;
+}
+
+li, button{
+    border: none;
+    border-radius: 20px;
+}
+
+h3{
+    font-size: 2.3em;
+    text-align: center;
+}
+
+.avatar_display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 40vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.avatar_container{
+    position: relative;
+    height: 250px;
+    width: 200px;
+}
+
+.avatar_container canvas{
+    width: 100%;
+}
+
+#hats{
+    z-index: 100;
+    top: 0;
+}
+#eyes{
+    z-index: 80;
+    top: 83px;
+}
+#head{
+    top: 40px;
+    z-index: 60;
+}
+#suits{
+    z-index: 40;
+    top: 161px;
+}
+#body{
+    bottom: 10px;
+    z-index: 20;
+}
+#shoes{
+    z-index: 10;
+    bottom: 0;
+}
+#foot{
+    bottom: 0;
+}
+
+#random{
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    min-height: 65px;
+    min-width: 65px;
+    width: 5vw;
+    height: 5vw;
+    border: 1px solid var(--dark);
+    border-radius: 50%;
+    background-color: var(--dark_white);
+    z-index: 100;
+    transition: 0.5s all;
+}
+
+#random img{
+    object-fit: cover;
+    width: 60%;
+    transition: 0.5s transform;
+}
+
+#random:hover > img{
+    transform: rotateZ(45deg);
+}
+
+.customization{
+    height: 60vh;
+    width: 100vw;
+}
+
+#custom_select{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 5px 15px;
+    border-top: 1px solid var(--dark);
+    border-bottom: 1px solid var(--dark);
+    background-color: var(--gray2);
+    box-shadow: 0px 12px 22px 3px var(--shadow);
+}
+
+.selection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 5px 15px;
+    border: 1px solid var(--dark);
+    background-color: var(--dark_white);
+    font-size: 1.7em;
+    transition: 0.5s all;
+}
+
+.selection:hover, #random:hover{
+    border: 1px solid var(--gray3);
+    background-color: var(--dark);
+    color: var(--gray3);
+    transform: scale(1.2);
+}
+
+.selection img{
+    object-fit: cover;
+    min-width: 10px;
+    max-width: 25px;
+}
+
+.selected{
+    /* padding: 5px 50px; */
+    border: 1px solid var(--gray3);
+    background-color: var(--dark);
+    color: var(--gray3);
+}
+
+#custom_contents{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: baseline;
+    padding: 10px 10px 20px 10px;
+    width: 100vw;
+    overflow-y: auto;
+}
+
+.option{
+    height: 30vw;
+    width: 30vw;
+    max-width: 150px;
+    max-height: 150px;
+    margin: 10px 5px;
+    padding: 10px;
+    background-color: var(--dark_white);
+    border: 1px solid var(--black);
+    transition: 0.2s transform;
+    animation: 0.5s charge;
+}
+
+.option:hover{
+    transform: scale(1.1);
+}
+
+.button_img{
+    object-fit: cover;
+    width: 100%;
+    animation: 1s img;
+}
+
+.remove{
+    border-color: var(--red);
+}
+
+.remove img{
+    width: 75%;
+}
+
+.download_section, .download_content, #info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.download_section{
+    justify-content: space-evenly;
+    height: 100%;
+    animation: 0.5s charge;
+}
+
+#download_button{
+    margin: 13px 0;
+    padding: 8px 20px;
+    font-size: 2em;
+    background-color: var(--dark_green);
+    color: var(--dark_white);
+    transition: 0.5s all;
+}
+
+#download_button:hover{
+    background-color: var(--green);
+    cursor: pointer;
+}
+
+#info p{
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+#git_ico{
+    width: 35px;
+}
+
+#git_ico img{
+    object-fit: cover;;
+    width: 100%;
+}
+
+@media (orientation: landscape){
+    body{
+        display: flex;
+    }
+    .avatar_display{
+        height: 100vh;
+        width: 50vw;
+    }
+    .customization{
+        height: 100vh;
+        width: 50vw;
+        border-left: 1px solid var(--dark);
+    }
+    #custom_select{
+        border-top: none;
+    }
+    #custom_contents{
+        width: 50vw;
+    }
+}
+
+@keyframes img{
+    from{
+        opacity: 0.2;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes charge{
+    from{
+        transform: scale(0.8);
+    }
+    to{
+        transform: scale(1);
+    }
+}

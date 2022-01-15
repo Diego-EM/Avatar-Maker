@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="img/misc/ico_light.svg">
+    <title>Make your cat!</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="avatar_display">
+		<canvas id="background"></canvas>
+		<div class="avatar_container">
+			<canvas id="hats"></canvas>
+			<canvas id="eyes"></canvas>
+			<canvas id="head" class="avatar"></canvas>
+			<canvas id="suits"></canvas>
+			<canvas id="body" class="avatar"></canvas>
+			<canvas id="shoes"></canvas>
+			<canvas id="foot" class="avatar"></canvas>
+		</div>
+		<button type="button" id="random">
+			<img src="img/misc/dice_ico.svg" alt="random"/>
+		</button>
+	</div>
+	<div class="customization">
+		<ul id="custom_select">
+			<li class="selection selected"><div><img src="img/misc/head_ico.svg" alt="head"/></div></li>
+			<li class="selection"><div><img src="img/misc/eye_ico.svg" alt="eye"/></div></li>
+			<li class="selection"><div><img src="img/misc/hat_ico.svg" alt="hat"></div></li>
+			<li class="selection"><div><img src="img/misc/suit_ico.svg" alt="suit"></div></li>
+			<li class="selection"><div><img src="img/misc/shoe_ico.svg" alt="shoe"></div></li>
+			<li class="selection"><div><img src="img/misc/download_ico.svg"></div></li>
+		</ul>
+		<div id="custom_contents">
+			<div class="download_section">
+				<div class="download_content">
+					<h3>Download and share your cat!</h3>
+					<button type="button" id="download_button">Save my cat</button>
+				</div>
+				<div id="info">
+					<p>Developed by Diego EM</p>
+					<a id="git_ico" href="https://github.com/Diego-EM" target="_blank"><img src="img/misc/github_ico.svg" alt="GitHub"/></a>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="script/draw_app.js"></script>
+<script src="script/custom_app.js"></script>
+</body>
+</html>
