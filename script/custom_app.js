@@ -82,8 +82,12 @@ async function loadImage(url){
 }
 
 async function downloadAvatar(){
+    //Set the loading animation
+    const button_message = document.getElementById("button_message");
+    const loader = document.getElementById('loader_ico');
+    button_message.classList.toggle('hidden');
+    loader.classList.toggle('hidden');
     //Merge all canvas in one and download the generated image
-    // const res = 2;
     const avatar_img = document.createElement("CANVAS");
     const img_ctx = avatar_img.getContext('2d');
     avatar_img.height = 750;
@@ -133,6 +137,10 @@ async function downloadAvatar(){
     link.click();
     link.remove();
     avatar_img.remove();
+
+    //Setting button to initial
+    button_message.classList.toggle('hidden');
+    loader.classList.toggle('hidden');
 }
 
 resizeContSection();

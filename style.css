@@ -222,15 +222,30 @@ h3{
 #download_button{
     margin: 13px 0;
     padding: 8px 20px;
-    font-size: 2em;
     background-color: var(--dark_green);
-    color: var(--dark_white);
     transition: 0.5s all;
+}
+
+#button_message{
+    font-size: 2em;
+    color: var(--dark_white);
 }
 
 #download_button:hover{
     background-color: var(--green);
     cursor: pointer;
+}
+
+#loader_ico{
+    width: 25px;
+    transform-origin: center;
+    filter: invert(1);
+    animation: rotate 750ms ease-in-out infinite alternate;
+}
+
+#loader_ico img{
+    width: 100%;
+    object-fit: contain;
 }
 
 #info p{
@@ -245,6 +260,10 @@ h3{
 #git_ico img{
     object-fit: cover;;
     width: 100%;
+}
+
+.hidden{
+    display: none;
 }
 
 @media (orientation: landscape){
@@ -265,6 +284,15 @@ h3{
     }
     #custom_contents{
         width: 50vw;
+    }
+}
+
+@keyframes rotate {
+    from{
+        transform: rotateZ(0);
+    }
+    to{
+        transform: rotateZ(360deg);
     }
 }
 
