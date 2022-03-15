@@ -240,7 +240,7 @@ h3{
     width: 25px;
     transform-origin: center;
     filter: invert(1);
-    animation: rotate 750ms ease-in-out infinite alternate;
+    animation: rotate 750ms linear infinite;
 }
 
 #loader_ico img{
