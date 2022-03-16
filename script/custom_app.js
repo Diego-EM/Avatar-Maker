@@ -134,7 +134,7 @@ async function downloadAvatar(){
     
     const link = document.createElement('a');
     link.download = 'my-cat.jpg';
-    link.href = avatar_img.toDataURL("image/jpg");
+    link.href = avatar_img.toDataURL("image/jpg",1);
     link.click();
     link.remove();
     avatar_img.remove();
