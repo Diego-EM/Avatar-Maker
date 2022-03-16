@@ -26,7 +26,8 @@ function generateOptionBtns(index = 0){
     if (index === 5){
         container.appendChild(download_section);
         const download_button = document.getElementById("download_button");
-        download_button.addEventListener('click', () => downloadAvatar());
+        download_button.removeEventListener('click', downloadAvatar);
+        download_button.addEventListener('click', downloadAvatar);
     } else {
         if (index > 1 && index < option.length){
             container.innerHTML = `<button type="button" class="option remove">
